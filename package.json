@@ -1,0 +1,14 @@
+{
+  "name": "theming-fixture",
+  "private": true,
+  "version": "0.5.5",
+  "scripts": {
+    "build": "mdx-deck build rust.mdx",
+    "start": "mdx-deck rust.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "1.7.0",
+    "mdx-deck-code-surfer": "0.5.5",
+    "raw-loader": "0.5.1"
+  }
+}

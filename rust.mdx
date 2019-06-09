@@ -1,0 +1,265 @@
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import { dark } from "mdx-deck/themes"
+import nightOwl from "prism-react-renderer/themes/nightOwl"
+export const theme = {
+  ...dark,
+  codeSurfer: {
+    ...nightOwl,
+    lang: "rust",
+    showNumbers: false
+  }
+}
+
+# Rust
+
+![](https://d21ii91i3y6o6h.cloudfront.net/gallery_images/from_proof/8078/large/1441751951/official-rust-logo.png)
+
+A language with super powers
+
+---
+# Features
+
+- Memory safety
+- Concurrency: Thread safety
+- No unexpected behaviour
+- Zero cost abstractions
+- Some Functional
+- Package manager
+- Great community
+
+---
+
+|                   | Javascript | Ruby | Java | C/C++ | Rust |
+|-------------------|----------|------|------|-----|------|
+| Memory safe       |  :x: No  |     :x: No  | :x: No     |  :skull: No  |  :white_check_mark: Yes |
+| Multithread       | :x:  No  |    :x:  No  | :white_check_mark: Yes   |  :white_check_mark: Yes  |  :white_check_mark: Yes |
+| Type system       | :x:  No  |    :x:  No  | :white_check_mark: Yes   |  :white_check_mark: Yes  |  :white_check_mark: Yes |
+| Garbage collector | :x:  Yes |    :x:  Yes | :x: Yes   |  :white_check_mark: No  |  :white_check_mark: No  |
+| Null          | :x:  Yes |    :x:  Yes | :x: Yes   |  :x: Yes  |  :white_check_mark: No  |
+| Unexpected behaviour | :x:  Yes |    :x:  Yes | :x: Yes   |  :x: Yes  |  :white_check_mark: No  |
+| Virtual Machine   | :x:  Yes |    :x:  Yes | :x: Yes   |  :white_check_mark: No  |  :white_check_mark: No  |
+| Package manager   | :white_check_mark: Yes |    :white_check_mark: Yes  | :white_check_mark: Yes  |  :x: No  |  :white_check_mark: Yes |
+| Test suite | :white_check_mark: Yes |    :white_check_mark: Yes  | :white_check_mark: Yes  |  :question: No by default  |  :white_check_mark: Yes |
+| Fast prototyping | :white_check_mark: Yes |    :white_check_mark: Yes  | :x: No  |  :x: No  |  :x: No |
+
+---
+
+# Language
+
+---
+
+<CodeSurfer
+  title="Structs"
+  code={require("!raw-loader!./snippets/struct.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Implementation"
+  code={require("!raw-loader!./snippets/impl.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Traits"
+  code={require("!raw-loader!./snippets/trait.rs")}
+  steps={[
+    {},
+    { range:[3, 6] },
+    { range:[8, 12] },
+    { range:[14, 16] },
+    {}
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Enums"
+  code={require("!raw-loader!./snippets/enums.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Type inference"
+  code={require("!raw-loader!./snippets/type_inference.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Immutability"
+  code={require("!raw-loader!./snippets/mutability.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Immutability"
+  code={require("!raw-loader!./snippets/init_mutability.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Pattern matching"
+  code={require("!raw-loader!./snippets/basic_pattern_matching.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Advanced pattern matching"
+  code={require("!raw-loader!./snippets/pattern_matching.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Pattern matching by type"
+  code={require("!raw-loader!./snippets/type_pattern_matching.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Destructuring"
+  code={require("!raw-loader!./snippets/destructuring.rs")}
+  steps={[
+    {},
+    { range:[7, 10], notes: 'Destructure members of the struct' },
+    { range:[12, 13], notes: 'Destructure and rename' },
+    { range:[15, 16], notes: 'Ignore some variables' },
+    {}
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="If let"
+  code={require("!raw-loader!./snippets/if_let.rs")}
+  steps={[
+    {},
+    { range:[4, 6] },
+    { tokens: { 4: [ 3, 5, 6, 8 ] } },
+    { tokens: { 4: [ 7 ], 5: [5] } },
+    {}
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Option"
+  code={require("!raw-loader!./snippets/option.rs")}
+  steps={[
+    {},
+    { range:[4, 7] },
+    { range:[9, 10] },
+    { range:[12, 13] },
+    {}
+  ]}
+/>
+
+---
+
+<CodeSurfer
+  title="Result pattern"
+  code={require("!raw-loader!./snippets/result.rs")}
+  notes='Ignored results raise a compiler error'
+/>
+
+---
+
+<CodeSurfer
+  title="Functional"
+  code={require("!raw-loader!./snippets/functional.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Channels"
+  code={require("!raw-loader!./snippets/channels.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Unsafe blocks"
+  code={require("!raw-loader!./snippets/unsafe.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Futures"
+  code={require("!raw-loader!./snippets/async.rs")}
+/>
+
+---
+
+<CodeSurfer
+  title="Package Manager: Cargo"
+  lang="toml"
+  code={require("!raw-loader!./snippets/cargo.toml")}
+/>
+
+---
+
+# Workshop
+
+5 mins workshop
+
+---
+
+<CodeSurfer
+  title="Workshop"
+  code={require("!raw-loader!./snippets/motorcillo.rs")}
+  steps={[
+    {},
+    { range:[1, 10] },
+    { range:[12, 32] },
+    { range:[34, 53] },
+    { range:[59, 71] },
+    { range:[97, 117] },
+    { range:[74, 95] },
+    {}
+  ]}
+/>
+
+---
+
+## ⚒️ More
+
+- Cargo: https://crates.io/
+- WebAssembly / Wasmer
+- Forum: https://internals.rust-lang.org
+
+---
+
+## :books: Learn
+
+- https://docs.rs/
+- https://rosettacode.org/wiki/Category:Rust
+- https://nostarch.com/Rust
+
+---
+
+## :rocket: Projects
+
+- https://github.com/rust-unofficial/awesome-rust
+- https://github.com/koute/stdweb
+- https://swc-project.github.io/
+- https://clap.rs/
+- https://hyper.rs/
+- https://diesel.rs/
+- https://rocket.rs/
+
+---
+
+# :clap: Thanks!
